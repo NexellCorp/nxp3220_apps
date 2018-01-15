@@ -1,0 +1,42 @@
+
+config: Create makefiles with cmakelists
+
+	[For artik310]
+	#> cmake -DCMAKE_TOOLCHAIN_FILE=cmake/arm.artik310.cmake .
+
+
+	[For x86]
+	#> cmake .
+
+build:
+	#> make
+
+install: install builded binary to result directory
+
+	#> make install
+
+		[result path for artik310]
+		result/artik310/...
+
+		[result path for x86]
+		result/x86/...
+
+clean:
+	
+	clean
+		- clean all
+		#> make clean
+
+	clean-all
+		- clean all
+		- remove all generated files by cmake
+		#> make clean-all
+
+help:
+	#> make help
+
+components build/clean
+	#> make help
+		....
+	#> make <component>
+	#> make <component>-clean
