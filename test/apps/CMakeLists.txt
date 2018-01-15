@@ -4,3 +4,4 @@ project(apps)
 
 add_subdirectory(main)
 add_subdirectory(cpu)
+add_subdirectory(mem)

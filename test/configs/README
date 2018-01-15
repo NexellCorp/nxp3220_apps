@@ -1,0 +1,48 @@
+{
+        "result"   : "/root",
+			- [optional]: <string>: set test result info directory.
+
+        "continue" : false,
+			- [optional]: <true/false>: determine continue execute when other apps is failed. (default false)
+
+        "0": {
+	- int: determine apps is execute priority, this must be unique number.
+
+                        "skip"     : false,
+				- [optional]: <true/false>: determine execute this app. (default false)
+
+                        "id"       : 1,
+				- [optional]: int: determine app's id. (default 0)
+
+                        "descript" : "get core number",
+				- [optional]: <string>: app's description. (default null)
+
+                        "thread"   : false,
+				- [optional]: <true/false>: determine execute with thread.
+
+                        "path"     : "/usr/bin",
+				- [optional]: <string>: app's patch.
+
+                        "command"  : "cpu-num.sh",
+				-  [must]: <string>:app's name.
+
+                        "args"     : "",
+				- [optional]: <string>: app's arguments.
+
+                        "return"   : [8, 8],
+                        	- [optional]: <array int>: app's return range,
+                        			if set this check return value range (default 0,0)
+
+                        "loop"     : 0,
+                        	- [optional]: <int> : app loop count,
+
+                        "delay"    : 0,
+                        	- [optional]: <int> : app delay ms when start,
+
+                        "sleep"    : 0,
+                        	- [optional]: <int> : app sleep ms when loop,
+
+                        "logofile" : "cpu-num.txt"
+                        	- [optional]: <string>: app log file, this file is redirect 'stdout',
+                }
+}
